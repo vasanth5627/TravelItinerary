@@ -1,0 +1,86 @@
+Low-Level Design Document
+1. Introduction
+This document provides a low-level design description for the Travel Package Management System. It includes detailed information about the classes, their attributes, and methods, as well as the relationships between them.
+
+2. Class Diagram
+Include the class diagram representing the classes and their relationships.
+
+3. Class Descriptions
+
+3.1. TravelPackage
+Description: Represents a travel package that includes multiple destinations and can accommodate a certain number of passengers.
+Attributes:
+name: String - The name of the travel package.
+passengerCapacity: int - The maximum number of passengers the package can accommodate.
+destinations: List<Destination> - The list of destinations included in the package.
+passengers: List<Passenger> - The list of passengers booked for the package.
+Methods:
+getName(): String - Returns the name of the travel package.
+setName(name: String): void - Sets the name of the travel package.
+getPassengerCapacity(): int - Returns the passenger capacity of the travel package.
+setPassengerCapacity(passengerCapacity: int): void - Sets the passenger capacity of the travel package.
+getDestinations(): List<Destination> - Returns the list of destinations included in the package.
+setDestinations(destinations: List<Destination>): void - Sets the list of destinations included in the package.
+getPassengers(): List<Passenger> - Returns the list of passengers booked for the package.
+setPassengers(passengers: List<Passenger>): void - Sets the list of passengers booked for the package.
+printItinerary(): void - Prints the itinerary of the travel package.
+printPassengerList(): void - Prints the list of passengers booked for the package.
+addDestination(destination: Destination): void - Adds a destination to the travel package.
+addPassenger(passenger: Passenger): void - Adds a passenger to the travel package.
+
+3.2. Destination
+Description: Represents a destination included in a travel package.
+Attributes:
+name: String - The name of the destination.
+activityList: List<Activity> - The list of activities available at the destination.
+Methods:
+getName(): String - Returns the name of the destination.
+setName(name: String): void - Sets the name of the destination.
+getActivityList(): List<Activity> - Returns the list of activities available at the destination.
+setActivityList(activityList: List<Activity>): void - Sets the list of activities available at the destination.
+addActivity(activity: Activity): void - Adds an activity to the destination.
+addActivities(activities: List<Activity>): void - Adds multiple activities to the destination.
+
+3.3. Activity
+Description: Represents an activity available at a destination.
+Attributes:
+name: String - The name of the activity.
+description: String - A description of the activity.
+cost: double - The cost of the activity.
+capacity: int - The maximum capacity of the activity.
+destination: Destination - The destination where the activity takes place.
+currentCapacity: int - The current number of participants in the activity.
+Methods:
+getName(): String - Returns the name of the activity.
+setName(name: String): void - Sets the name of the activity.
+getDescription(): String - Returns the description of the activity.
+setDescription(description: String): void - Sets the description of the activity.
+getCost(): double - Returns the cost of the activity.
+setCost(cost: double): void - Sets the cost of the activity.
+getCapacity(): int - Returns the maximum capacity of the activity.
+setCapacity(capacity: int): void - Sets the maximum capacity of the activity.
+getDestination(): Destination - Returns the destination where the activity takes place.
+setDestination(destination: Destination): void - Sets the destination where the activity takes place.
+getCurrentCapacity(): int - Returns the current number of participants in the activity.
+setCurrentCapacity(currentCapacity: int): void - Sets the current number of participants in the activity.
+bookParticipant(): boolean - Books a participant for the activity and updates the current capacity.
+cancelParticipant(): boolean - Cancels a participant's booking for the activity and updates the current capacity.
+
+3.4. Passenger
+Description: Represents a passenger who has booked a travel package.
+Attributes:
+name: String - The name of the passenger.
+age: int - The age of the passenger.
+contactNumber: String - The contact number of the passenger.
+Methods:
+getName(): String - Returns the name of the passenger.
+setName(name: String): void - Sets the name of the passenger.
+getAge(): int - Returns the age of the passenger.
+setAge(age: int): void - Sets the age of the passenger.
+getContactNumber(): String - Returns the contact number of the passenger.
+setContactNumber(contactNumber: String): void - Sets the contact number of the passenger.
+
+Conclusion
+This low-level design document provides a detailed description of the classes,
+their attributes, methods, and relationships for the Travel Package Management System.
+It serves as a guide for the implementation phase and helps ensure a clear understanding of the system's design.

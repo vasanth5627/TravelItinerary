@@ -1,0 +1,100 @@
+      +-------------------+
+      |    TravelPackage  |
+      +-------------------+
+      | -name: String     |
+      | -passengerCapacity: int |
+      | -destinations: List<Destination> |
+      | -passengers: List<Passenger> |
+      +-------------------+
+      | +TravelPackage(name: String, passengerCapacity: int, destinations: List<Destination>, passengers: List<Passenger>)
+      | +TravelPackage(name: String, passengerCapacity: int, destinations: List<Destination>)
+      | +TravelPackage(name: String, passengerCapacity: int)
+      | +getName(): String
+      | +setName(name: String): void
+      | +getPassengerCapacity(): int
+      | +setPassengerCapacity(passengerCapacity: int): void
+      | +getDestinations(): List<Destination>
+      | +setDestinations(destinations: List<Destination>): void
+      | +getPassengers(): List<Passenger>
+      | +setPassengers(passengers: List<Passenger>): void
+      | +printItinerary(): void
+      | +printPassengerList(): void
+      | +addDestination(destination: Destination): void
+      | +addPassenger(passenger: Passenger): void
+      +-------------------+
+
+      +-------------------+
+      |     Passenger     |
+      +-------------------+
+      | -name: String     |
+      | -passengerNumber: String |
+      | -membership: MembershipType |
+      | -balance: double  |
+      | -destinations: List<Destination> |
+      | -activityList: List<Activity> |
+      | -travelPackage: TravelPackage |
+      +-------------------+
+      | +Passenger(name: String, passengerNumber: String, membership: MembershipType, balance: double)
+      | +getName(): String
+      | +setName(name: String): void
+      | +getPassengerNumber(): String
+      | +setPassengerNumber(passengerNumber: String): void
+      | +getMembership(): MembershipType
+      | +setMembership(membership: MembershipType): void
+      | +getBalance(): double
+      | +setBalance(balance: double): void
+      | +getDestinations(): List<Destination>
+      | +getActivityList(): List<Activity>
+      | +getTravelPackage(): TravelPackage
+      | +setTravelPackage(travelPackage: TravelPackage): void
+      | +passengerDetails(): void
+      | +chooseDestination(destination: Destination): void
+      | +enrollActivities(activity: Activity): void
+      +-------------------+
+
+      +-------------------+
+      |    Destination    |
+      +-------------------+
+      | -name: String     |
+      | -activityList: List<Activity> |
+      +-------------------+
+      | +Destination(name: String)
+      | +getName(): String
+      | +setName(name: String): void
+      | +getActivityList(): List<Activity>
+      | +setActivityList(activityList: List<Activity>): void
+      | +addActivity(activity: Activity): void
+      | +addActivity(activities: List<Activity>): void
+      +-------------------+
+
+      +-------------------+
+      |     Activity      |
+      +-------------------+
+      | -name: String     |
+      | -description: String |
+      | -cost: double     |
+      | -capacity: int    |
+      | -destination: Destination |
+      | -currentCapacity: int |
+      +-------------------+
+      | +Activity(name: String, description: String, cost: double, capacity: int)
+      | +getName(): String
+      | +setName(name: String): void
+      | +getDescription(): String
+      | +setDescription(description: String): void
+      | +getCost(): double
+      | +setCost(cost: double): void
+      | +getCapacity(): int
+      | +setCapacity(capacity: int): void
+      | +getDestination(): Destination
+      | +setDestination(destination: Destination): void
+      | +getCurrentCapacity(): int
+      | +setCurrentCapacity(currentCapacity: int): void
+      +-------------------+
+        +-------------------------------+
+        |       PassengerType           |
+        +-------------------------------+
+        | STANDARD                      |
+        | GOLD                          |
+        | PREMIUM                       |
+        +-------------------------------+

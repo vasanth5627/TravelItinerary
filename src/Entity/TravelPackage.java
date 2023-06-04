@@ -115,7 +115,6 @@ public class TravelPackage {
     public void addDestination(Destination destination){
         destinations.add(destination);
     }
-
     public void addPassenger(Passenger passenger){
         if(this.currentCapacity<this.passengerCapacity){
             passengers.add(passenger);
